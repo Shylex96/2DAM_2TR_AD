@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="gestor" transaction-type="RESOURCE_LOCAL">
+	    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	    <properties>
+	 		<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gestor2"/> -->
+	 		<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gestor"/>
+	 		<!-- <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/> -->
+	 		<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+	 		<!-- <property name="javax.persistence.jdbc.user" value="root"/> -->
+	 		<property name="jakarta.persistence.jdbc.user" value="root"/>
+	 		<!-- <property name="javax.persistence.jdbc.password" value="Studium2019;"/> -->
+	 		<property name="jakarta.persistence.jdbc.password" value="Studium2023;"/>
+	 		<!-- <property name="javax.persistence.schema-generation.database.action" value="update"/> -->
+	 		<property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+	 		<!--Esta línea es para que Hibernate nos muestre las querys que ejecuta en cada momento.  -->
+	 		<property name = "hibernate.show_sql" value = "true" />
+	    </properties>
+	</persistence-unit>
+</persistence>
