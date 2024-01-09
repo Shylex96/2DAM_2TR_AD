@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="Sevilla" class="es.studium.colecciones.Provincia">
+		<constructor-arg name="nombre" value="Sevilla"></constructor-arg>
+		<constructor-arg name="poblaciones">
+			<list>
+				<ref bean="SevillaCapital" />
+				<bean class="es.studium.colecciones.Poblacion">
+					<constructor-arg name="nombre" value="Ecija"></constructor-arg>
+					<constructor-arg name="cantidadHabitantes" value="40634"></constructor-arg>
+				</bean>
+				<bean class="es.studium.colecciones.Poblacion">
+					<constructor-arg name="nombre" value="Mairena del Aljarafe"></constructor-arg>
+					<constructor-arg name="cantidadHabitantes" value="40700"></constructor-arg>
+				</bean>
+				<ref bean="DosHermanas"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="DosHermanas" class="es.studium.colecciones.Poblacion">
+		<constructor-arg name="nombre" value="Dos Hermanas"></constructor-arg>
+		<constructor-arg name="cantidadHabitantes" value="130369"></constructor-arg>
+	</bean>
+	<bean id="SevillaCapital" class="es.studium.colecciones.Poblacion">
+		<constructor-arg name="nombre" value="Sevilla"></constructor-arg>
+		<constructor-arg name="cantidadHabitantes" value="696676"></constructor-arg>
+	</bean>
+</beans>
