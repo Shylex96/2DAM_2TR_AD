@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="cliente" class="es.studium.autowiring.Cliente"
+		autowire="constructor">
+		<constructor-arg name="id" value="1"></constructor-arg>
+	</bean>
+	<bean id="persona" class="es.studium.autowiring.Persona" autowire="constructor">
+		<constructor-arg name="nombre" value="María José"></constructor-arg>
+	</bean>
+	<bean id="ciudad" class="es.studium.autowiring.Ciudad">
+		<constructor-arg name="nombre" value="Sevilla"></constructor-arg>
+	</bean>
+</beans>
