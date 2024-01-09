@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="vehiculo" class="es.studium.referencias.Vehiculo">
+		<property name="marca" value="Mercedes Benz"></property>
+		<property name="modelo" value="Clase C"></property>
+		<!--Esta ref a motor está haciendo referencia al motor de la clase Motor -->
+		<property name="motor" ref="motor"></property>
+	</bean>
+	<bean id="motor" class="es.studium.referencias.Motor">
+		<property name="culata" ref="culata"></property>
+		<property name="bloque" ref="bloque"></property>
+		<property name="carter" ref="carter"></property>
+		<property name="cilindrada" value="1.8"></property>
+	</bean>
+	<bean id="culata" class="es.studium.referencias.Culata">
+		<property name="cantidadBujias" value="4"></property>
+	</bean>
+	<bean id="bloque" class="es.studium.referencias.Bloque">
+		<property name="cantidadCilindros" value="4"></property>
+	</bean>
+	<bean id="carter" class="es.studium.referencias.Carter">
+		<property name="volumenAceite" value="6.5"></property>
+	</bean>
+</beans>
