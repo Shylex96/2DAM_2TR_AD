@@ -1,0 +1,10 @@
+#
+# Generated with Matisse Schema Definition Language 9.1.12
+# Generation date: Tue Feb 13 09:09:21 2024
+#
+# Mapping of Java classes and indexes to the corresponding database schema objects
+#
+biblioteca.Autor = biblioteca.Autor
+biblioteca.Obra = biblioteca.Obra
+biblioteca.Libro = biblioteca.Libro
+biblioteca.Articulo = biblioteca.Articulo
